@@ -1,7 +1,9 @@
 .main {
     background-color: white;
     border-radius: 10px 10px 0 0;
-    margin:20px
+    width: 100%;
+    margin: 20px 10px;
+    height: 80%;
 }
 
 .flex{

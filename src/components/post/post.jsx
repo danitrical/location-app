@@ -1,17 +1,27 @@
 import { Avatar } from "@mui/material";
 import { Space } from "../space/space";
 import './post.css';
-export const Post = () => {
-    const userName = 'Danish';
-    const userImage = undefined;
+export const Post = (data) => {
+    const { 
+        title, 
+        image, 
+        createdDate, 
+        userName, 
+        description, 
+        location 
+    } = data.data;
+
+    console.log(data);
+
+
     return <>
     <div className="main">
         {/* Header of Post */}
         <div className="flex">
             <div className="m-r-10">
                 {
-                    userImage ? 
-                    <img src={ userImage } alt="userImage" /> :
+                    image ? 
+                    <img src={ image } alt="userImage" /> :
                     <Avatar />
                 }
             </div>
@@ -25,10 +35,10 @@ export const Post = () => {
         <div className="flex justify-between">
             <div>
                 <h1  className="no-margin">
-                    Title
+                    { title }
                 </h1>
                 <p className="no-margin">
-                    Date
+                    {/* { createdDate} */}
                 </p>
             </div>
             <div>
@@ -40,16 +50,22 @@ export const Post = () => {
                 </button>
             </div>
         </div>
-        <Space />
-        <div className="flex">
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio omnis expedita officia aperiam? Illum quae, ducimus, adipisci impedit, nesciunt molestiae nisi cumque cum possimus at ea recusandae doloribus suscipit eaque.
-            </p>
-        </div>
+        {
+            description &&
+            <>
+                <Space />
+                <div className="flex">
+                    <p>
+                        { description }
+                    </p>
+                </div>    
+            </>
+        }
+        
         <Space />
         <div className="flex">
             <h3 className="m-r-10">Location: </h3>
-            <h3> Longitude, Latitude</h3>
+            <h3>{ location }</h3>
         </div>
     </div>
      

@@ -1,0 +1,11 @@
+.mainBody{
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 60%;
+    text-align: center;
+    /* align-items: center; */
+}
+
+.m-b-20{
+    margin-bottom: 20px;
+}

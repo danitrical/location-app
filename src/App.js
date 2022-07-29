@@ -1,11 +1,11 @@
 import './App.css';
 import { BrowserRouter as Router, Redirect, Route} from 'react-router-dom';
-import { Post } from './components/post/post';
+import { Main } from './pages/posts/main';
 
 function App() {
   return <Router>
     <Route path={ '/' } exact>
-      <Post />
+      <Main />
     </Route>
     <Redirect to={ '/' }/>
   </Router>;
