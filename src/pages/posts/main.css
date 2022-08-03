@@ -1,11 +1,15 @@
 .mainBody{
-    /* display: flex; */
-    /* flex-direction: column; */
-    width: 60%;
+    width: 50%;
     text-align: center;
-    /* align-items: center; */
+    margin: auto;
 }
 
 .m-b-20{
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .mainBody{
+        width: 90%;
+    }
 }
